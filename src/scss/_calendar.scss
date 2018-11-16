@@ -1,0 +1,130 @@
+.fc {
+	.fc-toolbar {
+		.fc-button {
+			background: #4a5361;
+		    color: #fff;
+		    padding: 5px 10px;
+		    height: auto;
+		    border: none;
+		    text-transform: capitalize;
+		    text-shadow: none;
+		    @include box-shadow(none);
+		    .fc-icon {
+		    	margin: 0;
+		    	top: 0;
+		    	@include pseudo-element('after') {
+		    		font-family: "iconkit";
+    				font-size: 16px;
+		    	}
+		    	&.fc-icon-left-single-arrow {
+		    		@include pseudo-element('after') {
+		    			content: "\e843";
+		    		}
+		    	}
+		    	&.fc-icon-right-single-arrow {
+		    		@include pseudo-element('after') {
+		    			content: "\e844";
+		    		}
+		    	}
+		    }
+		    &.fc-state-active, &.fc-state-down {
+		    	background: #272d36 !important;
+		    }
+		}
+		h2 {
+			font-size: 22px;
+			font-weight: 600;
+		}
+	}
+	.fc-view-container {
+		.fc-view {
+			table {
+				thead {
+					tr {
+						td, th {
+							&.fc-widget-header {
+								color: #4a5361;
+							    background: #f3f4f4;
+							    border-color: #f3f4f4;
+							    padding: 10px 0px;
+							}
+						}
+					}
+				}
+			}
+			.fc-day-number {
+				float: left;
+    			padding: 10px 0 5px 10px;
+			}
+			.fc-other-month {
+			    background: #f3f9ff;
+			}
+			.fc-event-container {
+				.fc-event {
+					display: block;
+				    padding: 3px 5px;
+				    color: $white;
+				    font-weight: 600;
+				    font-size: 12px;
+				    border: none;
+				}
+			}
+		}
+	}
+}
+
+.fc-unthemed  {
+    .fc-content, .fc-divider, .fc-list-heading, .fc-list-view, .fc-popover, .fc-row, tbody, td, thead {
+    	border-color: #f3f4f4;
+    }
+}
+.color-selector {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+	    position: relative;
+	    display: inline-block;
+	    width: 25px;
+	    height: 25px;
+	    margin: 0 8px 8px 0;
+	    background-color: #3e8ef7;
+	    @include border-radius(50%);
+	    input[type=radio] {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: 1;
+		    width: inherit;
+		    height: inherit;
+		    cursor: pointer;
+		    border-radius: inherit;
+		    opacity: 0;
+		    &:checked + label {
+		    	@include pseudo-element('after') {
+		    		position: absolute;
+				    top: 0px;
+				    left: 5px;
+				    display: inline-block;
+				    margin-top: -3px;
+				    font-size: 16px;
+				    line-height: 1;
+				    content: "\e83f";
+				    color: #fff;
+		    	}
+			}
+		}
+		label {
+		    position: relative;
+		    margin-bottom: .4rem;
+		    font-family: "iconkit";
+		    font-style: normal;
+		    font-weight: 400;
+		    font-variant: normal;
+		    text-transform: none;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

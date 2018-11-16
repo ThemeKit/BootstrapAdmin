@@ -1,0 +1,144 @@
+.btn {
+    padding: 6px 14px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    @include transition(0.3s ease-in-out);
+    i {
+	    margin-right: 5px;
+	}
+}
+.btn-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    display: inline-block;
+    @include border-radius(50%);
+    @include transition(all .5s ease-in-out);
+    i {
+	    margin-right: 0 !important;
+	}
+}
+.social-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: $white;
+	i {
+		margin: 0;
+	}
+}
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-inverse, .btn-purple, .btn-pink, .btn-twitter, .btn-facebook, .btn-linkedin, .btn-google, .btn-dribbble, .btn-instagram {
+    color: $white;
+}
+.btn-theme {
+    background: linear-gradient(150deg, #f05138 15%, #ee3a5b 70%, #ed1375 94%);
+    color: #fff;
+}
+.btn-default {
+    background-color: #dae6ec;
+    border-color: #dae6ec;
+    &:focus, &:hover, &:active, &.active {
+        background-color: #dae6ec;
+        border-color: #C2CED4;
+    }
+}
+.btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    &:hover, &:focus, &.active {
+        background-color: #1d7dca !important;
+        border: 1px solid #1d7dca !important;
+    }
+}
+.btn-success {
+    background-color: $success;
+    border: 1px solid $success;
+    &:hover, &:focus, &.active {
+        background-color: #009886 !important;
+        border: 1px solid #009886 !important;
+    }
+}
+.btn-info {
+    background-color: $info;
+    border: 1px solid $info;
+    &:hover, &:focus, &.active {
+        background-color: #25d8f6 !important;
+        border: 1px solid #25d8f6 !important;
+    }
+}
+.btn-warning {
+    background-color: $warning;
+    border: 1px solid $warning;
+    &:hover, &:focus, &.active {
+        background-color: #e69900 !important;
+        border: 1px solid #e69900 !important;
+    }
+}
+.btn-danger {
+    background-color: $danger;
+    border: 1px solid $danger;
+    &:focus, &:hover, &.active {
+        background-color: #ed3c39 !important;
+        border: 1px solid #ed3c39 !important;
+    }
+}
+.btn-inverse {
+    background-color: $inverse;
+    border: 1px solid $inverse;
+    &:hover, &:focus, &.active {
+        background-color: #414a58 !important;
+        border: 1px solid #414a58 !important;
+    }
+}
+.btn-purple {
+    background-color: $purple;
+    border: 1px solid $purple;
+    &:hover, &:focus, &.active {
+        background-color: #6254b2 !important;
+        border: 1px solid #6254b2 !important;
+    }
+}
+.btn-pink {
+    background-color: $pink;
+    border: 1px solid $pink;
+    &:hover, &:focus, &.active {
+        background-color: #f64b87 !important;
+        border: 1px solid #f64b87 !important;
+    }
+}
+.btn-facebook {
+    background: $facebook;
+}
+.btn-twitter {
+    background: $twitter;
+}
+.btn-dribbble {
+    background: $dribbble;
+}
+.btn-linkedin {
+	background: $linkedin;
+}
+.btn-google {
+    background: $google;
+}
+.btn-instagram {
+    background: $instagram;
+}
+.template-demo {
+	.btn {
+	    margin-right: 10px;
+	    margin-bottom: 10px;
+	}
+}
+.btn-group {
+	.btn {
+		margin: 0;
+	}
+}

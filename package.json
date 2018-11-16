@@ -1,0 +1,37 @@
+{
+  "name": "ThemeKit",
+  "version": "1.0",
+  "main": "dist/js/theme.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "bootstrap-tagsinput": "^0.7.1",
+    "c3": "^0.6.8",
+    "datatables.net": "^1.10.19",
+    "datatables.net-bs4": "^1.10.19",
+    "datatables.net-responsive": "^2.2.3",
+    "datatables.net-responsive-bs4": "^2.2.3",
+    "font-awesome": "^4.7.0",
+    "fullcalendar": "^3.9.0",
+    "icon-kit": "^1.0.0",
+    "ionicons": "^4.4.6",
+    "jquery-toast-plugin": "^1.3.2",
+    "jquery.repeater": "^1.2.1",
+    "jvectormap": "^2.0.4",
+    "moment": "^2.22.2",
+    "nestable": "^0.2.0",
+    "owl.carousel": "^2.3.*",
+    "perfect-scrollbar": "^1.4.*",
+    "popper.js": "^1.14.3",
+    "screenfull": "^3.3.*",
+    "select2": "^4.0.6-rc.1",
+    "summernote": "^0.8.10",
+    "tempusdominus-bootstrap-4": "^5.1.2",
+    "weather-icons": "^1.3.2"
+  }
+}

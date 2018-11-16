@@ -1,0 +1,90 @@
+.badge {
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    &.badge-top-left {
+	    top: 7px;
+	    right: 10px;
+	}
+	&.badge-top-left-2 {
+	    top: 40px;
+	    right: 10px;
+	}
+}
+.badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger, .badge-inverse, .badge-purple, .badge-pink, .badge-twitter, .badge-facebook, .badge-linkedin, .badge-google, .badge-dribbble, .badge-instagram {
+    color: $white;
+}
+.badge-theme {
+    background-color: $theme;
+}
+.badge-aqua {
+    background-color: $aqua;
+}
+.badge-blue {
+    background-color: $blue;
+}
+.badge-light-blue {
+    background-color: $light-blue;
+}
+.badge-teal {
+    background-color: $teal;
+}
+.badge-yellow {
+    background-color: $yellow;
+}
+.badge-orange {
+    background-color: $orange;
+}
+.badge-green {
+    background-color: $green;
+}
+.badge-lime {
+    background-color: $lime;
+}
+.badge-red {
+    background-color: $red;
+}
+.badge-fuchsia {
+    background-color: $fuchsia;
+}
+.badge-navy {
+    background-color: $navy;
+}
+.badge-empty {
+    background: $empty;
+}
+.badge-primary {
+    background-color: $primary;
+}
+.badge-success {
+    background-color: $success;
+}
+.badge-info {
+    background-color: $info;
+}
+.badge-warning {
+    background-color: $warning;
+}
+.badge-danger {
+    background-color: $danger;
+}
+.badge-muted {
+    background-color: $muted;
+}
+.badge-inverse {
+    background-color: $inverse;
+}
+.badge-purple {
+    background-color: $purple;
+}
+.badge-pink {
+    background-color: $pink;
+}
+.badge-white {
+    background-color: $white;
+}
+.btn {
+	.badge {
+	    padding: 2px 6px;
+	}
+}

@@ -1,0 +1,82 @@
+.card {
+	.card-body {
+		.dataTables_wrapper {
+			.dataTable {
+			    margin-left: -20px;
+			    width: calc(100% + 40px);
+			}
+			.form-control {
+			    border: none;
+			    min-height: 30px;
+			    background-color: #f4f4f4;
+			}
+			select.form-control {
+			    height: 30px !important;
+			}
+			.dataTables_paginate {
+				.pagination {
+					.page-item {
+						.page-link {
+						    margin-left: 5px;
+						    min-width: 30px;
+						    height: 30px;
+						    padding: 0;
+						    text-align: center;
+						    line-height: 30px;
+						    border: none;
+						    background-color: #f4f4f4;
+						    color: #212121;
+						    @include border-radius(30px);
+						}
+						&.previous, &.next {
+							.page-link {
+							    padding: 0 15px;
+							}
+						}
+						&.disabled {
+							.page-link {
+							    color: #6c757d;
+							    background-color: #f4f4f4;
+							    cursor: not-allowed;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.card-table {
+		.card-item {
+		    border-top: 1px solid #ededed;
+		}
+	}
+}
+.table {
+	thead {
+		background-color: #f6f8fb;
+		th {
+			font-weight: 600;
+		    color: #879099;
+		    font-size: 14px;
+		}
+	}
+	tbody {
+		td {
+			vertical-align: middle;
+			.table-user-thumb {
+			    width: 30px;
+			    height: 30px;
+			    border-radius: 50%;
+			}
+			.table-actions {
+			    text-align: right;
+			    a {
+				    color: #bcc1c6;
+				    display: inline-block;
+				    margin-left: 8px;
+				    font-size: 16px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+.full-window-modal {
+	.modal-dialog {
+	    position: fixed;
+	    width: 100%;
+	    height: 100%;
+	    margin: 0;
+	    max-width: 100%;
+	    left: 0;
+	    top: 0;
+	    bottom: 0;
+	    display: block;
+	    .modal-content {
+		    height: 100vh;
+		    border: none;
+		    @include border-radius(0);
+		    .modal-body {
+			    height: calc(100vh - 50px);
+			    overflow-x: auto;
+			}
+			.modal-footer {
+			    background-color: #393a3d;
+			    padding: 15px 24px;
+			    padding-top: 15px !important;
+			}
+		}
+	}
+}
+.modal-open {
+	.apps-modal {
+	    overflow: hidden;
+	    .close {
+		    position: absolute;
+		    top: 20px;
+		    right: 20px;
+		    text-shadow: none;
+		    z-index: 9;
+		}
+		.modal-dialog {
+		    width: 100%;
+		    max-width: 100%;
+		    border-radius: 0;
+		    margin: 0;
+		    .modal-content {
+			    border: none;
+			    border-radius: 0;
+			    min-height: 100vh;
+			    background-color: $white;
+			    .quick-search {
+				    position: absolute;
+				    width: 100%;
+				    top: 17px;
+				    padding: 0 50px;
+				    z-index: 9;
+				    .input-wrap {
+					    position: relative;
+					    i {
+						    position: absolute;
+						    right: 5px;
+						    top: 0;
+						    width: 30px;
+						    height: 35px;
+						    border-radius: 50%;
+						    line-height: 35px;
+						    text-align: center;
+						}
+					}
+				}
+				.modal-body {
+					.apps-wrap {
+					    @include flexbox();
+					    @include flex-flow(row wrap);
+					    @include justify-content(center);
+					    width: 100%;
+					    .app-item {
+						    width: 130px;
+						    height: 100px;
+						    margin: 10px;
+						    color: #ccc;
+						    text-align: center;
+						    @include flexbox();
+						    @include align-items(center);
+						    @include justify-content(center);
+						    a {
+							    display: inline-block;
+							    i {
+								    font-size: 40px;
+								    color: #3e5569;
+								    display: inline-block;
+								    margin-bottom: 10px;
+								    @include transition(all 0.3s ease 0.0s);
+								}
+								span {
+								    display: block;
+								    font-size: 14px;
+								    color: #3e5569;
+								}
+							}
+							&:hover {
+								i {
+								    color: $theme;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.fade {
+			.modal-dialog {
+			    overflow: hidden;
+			    @include transform(translate(0,0) scale(1.2));
+			}
+			&.show {
+				.modal-dialog {
+					@include transform(translate(0,0) scale(1));
+				}
+			}
+		}
+	}
+	
+}

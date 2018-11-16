@@ -1,0 +1,26 @@
+.slider-nav {
+	.left-arrow, .right-arrow {
+		font-size: 20px;
+	    color: #145388;
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin: 0 15px;
+	}
+	.slider-dot-container {
+	    display: inline-block;
+	    .owl-dot {
+		    width: 6px;
+		    height: 6px;
+		    border-radius: 10px;
+		    color: #00a7e2;
+		    background: #7cb9ec;
+		    outline: initial!important;
+		    border: initial;
+		    margin: 0 5px;
+		    padding: 0;
+		    &.active {
+			    background: #145388;
+			}
+		}
+	}
+}

@@ -1,0 +1,168 @@
+.card {
+    border-color: #ffff;
+    position: relative;
+    width: 100%;
+    border: none;
+    margin-bottom: 30px;
+    @include box-shadow(0 6px 0 0 rgba(0, 0, 0, 0.01), 0 15px 32px 0 rgba(0, 0, 0, 0.06));
+    @include transition(all 0.5s ease-in-out);
+    @include border-radius(4px);
+    .card-header {
+	    padding: 20px 20px;
+	    border: 0;
+	    background: none;
+	    @include flexbox();
+	    @include align-items(center);
+	    &:first-child {
+		    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+		}
+		h3 {
+			margin: 0;
+		    font-size: 18px;
+		    font-weight: normal;
+		    color: #212121;
+		}
+		.card-options {
+			a:not(.dropdown-item) {
+			    width: 30px;
+			    height: 30px;
+			    padding: 0;
+			    border-radius: 50%;
+			    text-align: center;
+			    line-height: 33px;
+			    color: #212121;
+			    display: inline-block;
+			    @include transition(all 0.5s ease-in-out);
+			}
+			span {
+			    color: #444;
+			    font-size: 12px;
+			}
+		}
+		.card-search {
+		    position: relative;
+		    .form-control {
+			    padding-right: 60px;
+			    font-size: 14px;
+			    max-height: 30px;
+			    min-height: 30px;
+			    &~ .btn {
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+				    padding: 0;
+				    width: 30px;
+				    height: 30px;
+				    line-height: 30px;
+				    border-radius: 4px;
+				    background-color: #eceff1;
+				    border: none;
+				    @include box-shadow(none);
+				}
+			}
+			&.with-adv-search {
+				.adv-btn {
+				    background-color: transparent;
+				    border: 0;
+				    position: absolute;
+				    right: 30px;
+				    top: 0;
+				    width: 30px;
+				    height: 30px;
+				    line-height: 30px;
+				    padding: 0;
+				    @include box-shadow(none);
+				}
+				.adv-search-wrap {
+				    padding: 20px;
+				    display: none;
+				    position: absolute;
+				    left: 30px !important;
+				    width: 100%;
+				    top: 30px;
+				    background-color: $white;
+				    z-index: 4;
+				    @include box-shadow(0 2px 30px rgba(0,0,0,.08));
+				    @include border-radius(6px);
+				    .form-control {
+					    padding-right: 15px;
+					}
+					.btn {
+						padding: 0 15px;
+					    font-size: 14px;
+					    height: 30px;
+					    @include border-radius(30px);
+					}
+					&.show {
+						display: block;
+					}
+				}
+			}
+		}
+		&.note-toolbar {
+		    padding: 0 0 5px 5px;
+		}
+		.dropdown {
+			.checkbox-dropdown {
+				padding: 0px;
+			    width: 16px;
+			    height: 16px;
+			    background-color: #dee2e6;
+			    border-radius: .25rem;
+			    margin-right: 15px;
+			}
+		}
+	}
+    .card-body {
+	    padding: 20px 20px;
+	    flex: 1 1 auto;
+	    position: relative;
+	}
+	.card-img {
+	    height: 100%;
+	    object-fit: cover;
+	    max-height: 200px;
+	    width: unset;
+	    @include border-radius(4px);
+	}
+	.card-img-overlay {
+	    background: rgba(0,0,0,.5);
+	    padding: 1.75rem;
+	    border-radius: 4px;
+	}
+	&.icon-card {
+		.card-body {
+			i {
+				font-size: 46px;
+			    line-height: 66px;
+			    color: $dark;
+			}
+			.card-text {
+			    color: #8f8f8f;
+			    height: 30px;
+			    line-height: 26px;
+			}
+			.lead {
+			    color: $dark;
+			    margin-bottom: 0;
+			}
+		}
+	}
+	.nav-pills {
+		&.custom-pills {
+			border-bottom: 1px solid #f1f1f1;
+			.nav-link {
+			    border-radius: 0;
+			    opacity: .7;
+			    font-size: 14px;
+			    padding: 12px 15px;
+			    &.active {
+			    	color: #ef4153;
+				    opacity: 1;
+				    background-color: transparent;
+				    border-bottom: 2px solid #ef4153;
+			    }
+			}
+		}
+	}
+}

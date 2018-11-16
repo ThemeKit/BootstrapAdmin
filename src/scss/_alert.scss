@@ -1,0 +1,27 @@
+.alert {
+    border: none;
+    .close {
+	    font-size: 18px;
+	    padding: 12px 15px;
+	}
+}
+.jq-icon-info {
+    background-color: $info;
+    color: $white;
+    border: none;
+}
+.jq-icon-warning {
+    background-color: $warning;
+    color: $white;
+}
+.jq-icon-error {
+    background-color: $danger;
+    color: $white;
+}
+.jq-icon-success {
+    color: $white;
+    background-color: $success;
+}
+.jq-toast-single, .jq-toast-single h2 {
+    font-family: 'Nunito Sans', sans-serif;
+}

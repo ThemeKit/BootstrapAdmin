@@ -1,0 +1,52 @@
+.auth-wrapper {
+	.lavalite-bg {
+	    height: 100vh;
+	    position: relative;
+	    width: 100%;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    .lavalite-overlay {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    background: linear-gradient(135deg,rgba(46,52,81,.4) 0%,rgba(52,40,104,.95) 100%);
+		}
+	}
+	.authentication-form {
+	    font-size: .9rem;
+	    width: 70%;
+	    display: block;
+	    padding: 100px 0;
+	    .logo-centered {
+		    width: 60px;
+		    margin: 0 auto;
+		    margin-bottom: 40px;
+		}
+		h3 {
+		    font-size: 20px;
+		    color: #272d36;
+		    margin-bottom: 20px;
+		}
+		.form-group {
+		    position: relative;
+		    .form-control {
+			    padding-left: 40px;
+			    & ~ i {
+				    position: absolute;
+				    top: 10px;
+				    left: 15px;
+				}
+			}
+		}
+		.sign-btn {
+		    margin-top: 30px;
+		}
+		.register {
+		    margin-top: 30px;
+		    text-align: center;
+		}
+	}
+}
