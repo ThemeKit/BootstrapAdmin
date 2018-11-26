@@ -1,13 +1,13 @@
 {
-  "name": "ThemeKit",
-  "version": "1.0",
-  "main": "dist/js/theme.js",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "name": "themekit",
+  "version": "1.0.2",
+  "description": "Free Bootstrap 4 Admin Template",
+  "main": "./dist/js/theme.js",
+  "keywords": ["bootstrap", "bootstrap4", "admin-dashboard", "admin-panel", "admin-template", 
+    "admin-ui", "admin", "html-template", "bootstrap-theme", "bootstrap-template", 
+    "bootstrap-admin-theme", "bootstrap-admin-dashboard"],
+  "author": "Lavalite <lavalite@renfos.com>",
   "license": "MIT",
-  "devDependencies": {},
   "dependencies": {
     "bootstrap": "^4.1.3",
     "bootstrap-tagsinput": "^0.7.1",
@@ -33,5 +33,9 @@
     "summernote": "^0.8.10",
     "tempusdominus-bootstrap-4": "^5.1.2",
     "weather-icons": "^1.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
