@@ -37,99 +37,110 @@
 .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-inverse, .btn-purple, .btn-pink, .btn-twitter, .btn-facebook, .btn-linkedin, .btn-google, .btn-dribbble, .btn-instagram {
     color: $white;
 }
-.btn-theme {
-    background: linear-gradient(150deg, #f05138 15%, #ee3a5b 70%, #ed1375 94%);
-    color: #fff;
-}
-.btn-default {
-    background-color: #dae6ec;
-    border-color: #dae6ec;
-    &:focus, &:hover, &:active, &.active {
+.btn {
+    &-theme {
+        background: linear-gradient(150deg, #f05138 15%, #ee3a5b 70%, #ed1375 94%);
+        color: #fff;
+    }
+    &default {
         background-color: #dae6ec;
-        border-color: #C2CED4;
+        border-color: #dae6ec;
+        &:focus, &:hover, &:active, &.active {
+            background-color: #dae6ec;
+            border-color: #C2CED4;
+            color: $white !important;
+        }
     }
-}
-.btn-primary {
-    background-color: $primary;
-    border: 1px solid $primary;
-    &:hover, &:focus, &.active {
-        background-color: #1d7dca !important;
-        border: 1px solid #1d7dca !important;
+    &-primary {
+        background-color: $primary;
+        border: 1px solid $primary;
+        &:hover, &:focus, &.active {
+            background-color: darken($primary, 5%);
+            border: 1px solid darken($primary, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-success {
-    background-color: $success;
-    border: 1px solid $success;
-    &:hover, &:focus, &.active {
-        background-color: #009886 !important;
-        border: 1px solid #009886 !important;
+    &-success {
+        background-color: $success;
+        border: 1px solid $success;
+        &:hover, &:focus, &.active {
+            background-color: darken($success, 5%);
+            border: 1px solid darken($success, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-info {
-    background-color: $info;
-    border: 1px solid $info;
-    &:hover, &:focus, &.active {
-        background-color: #25d8f6 !important;
-        border: 1px solid #25d8f6 !important;
+    &-info {
+        background-color: $info;
+        border: 1px solid $info;
+        &:hover, &:focus, &.active {
+            background-color: darken($info, 5%);
+            border: 1px solid darken($info, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-warning {
-    background-color: $warning;
-    border: 1px solid $warning;
-    &:hover, &:focus, &.active {
-        background-color: #e69900 !important;
-        border: 1px solid #e69900 !important;
+    &-warning {
+        background-color: $warning;
+        border: 1px solid $warning;
+        &:hover, &:focus, &.active {
+            background-color: darken($warning, 5%);
+            border: 1px solid darken($warning, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-danger {
-    background-color: $danger;
-    border: 1px solid $danger;
-    &:focus, &:hover, &.active {
-        background-color: #ed3c39 !important;
-        border: 1px solid #ed3c39 !important;
+    &-danger {
+        background-color: $danger;
+        border: 1px solid $danger;
+        &:focus, &:hover, &.active {
+            background-color: darken($danger, 5%);
+            border: 1px solid darken($danger, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-inverse {
-    background-color: $inverse;
-    border: 1px solid $inverse;
-    &:hover, &:focus, &.active {
-        background-color: #414a58 !important;
-        border: 1px solid #414a58 !important;
+    &-inverse {
+        background-color: $inverse;
+        border: 1px solid $inverse;
+        &:hover, &:focus, &.active {
+            background-color: darken($inverse, 5%);
+            border: 1px solid darken($inverse, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-purple {
-    background-color: $purple;
-    border: 1px solid $purple;
-    &:hover, &:focus, &.active {
-        background-color: #6254b2 !important;
-        border: 1px solid #6254b2 !important;
+    &-purple {
+        background-color: $purple;
+        border: 1px solid $purple;
+        &:hover, &:focus, &.active {
+            background-color: darken($purple, 5%);
+            border: 1px solid darken($purple, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-pink {
-    background-color: $pink;
-    border: 1px solid $pink;
-    &:hover, &:focus, &.active {
-        background-color: #f64b87 !important;
-        border: 1px solid #f64b87 !important;
+    &-pink {
+        background-color: $pink;
+        border: 1px solid $pink;
+        &:hover, &:focus, &.active {
+            background-color: darken($pink, 5%);
+            border: 1px solid darken($pink, 5%);
+            color: $white !important;
+        }
     }
-}
-.btn-facebook {
-    background: $facebook;
-}
-.btn-twitter {
-    background: $twitter;
-}
-.btn-dribbble {
-    background: $dribbble;
-}
-.btn-linkedin {
-	background: $linkedin;
-}
-.btn-google {
-    background: $google;
-}
-.btn-instagram {
-    background: $instagram;
+    &-facebook {
+        background: $facebook;
+    }
+    &-twitter {
+        background: $twitter;
+    }
+    &-dribbble {
+        background: $dribbble;
+    }
+    &-linkedin {
+        background: $linkedin;
+    }
+    &-google {
+        background: $google;
+    }
+    &-instagram {
+        background: $instagram;
+    }
 }
 .template-demo {
 	.btn {

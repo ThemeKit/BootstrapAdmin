@@ -1,6 +1,14 @@
 .card {
 	.card-body {
 		.dataTables_wrapper {
+			.dataTables_scroll {
+				margin-left: -20px;
+			    width: calc(100% + 40px);
+				.dataTable {
+				    margin-left: 0px;
+				    width: 100%;
+				}
+			}
 			.dataTable {
 			    margin-left: -20px;
 			    width: calc(100% + 40px);
@@ -28,7 +36,7 @@
 						    color: #212121;
 						    @include border-radius(30px);
 						}
-						&.previous, &.next {
+						&.previous, &.next, &.first, &.last {
 							.page-link {
 							    padding: 0 15px;
 							}

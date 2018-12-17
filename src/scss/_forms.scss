@@ -1,3 +1,20 @@
+.form-group {
+    margin-bottom: 1.25em;
+
+    .form-control-lg {
+        font-size: 1.25em;
+    }
+
+    .form-control-round {
+        border-radius: 50px;
+    }
+
+    .form-control-static {
+        &:focus {
+            outline: none;
+        }
+    }
+}
 .form-control {
 	height: auto;
     min-height: 35px;
@@ -10,12 +27,56 @@
     	color: #999999;
     }
     &:focus {
-    	background-color: #eff1f3;
-    	border-color: #eaeaea;
+    	border-color: #e2dfdf;
 	    -webkit-box-shadow: none;
 	    box-shadow: none;
     }
+    &.form-control-normal {
+        font-weight: 400;
+    }
+
+    &.form-control-bold {
+        font-weight: 700;
+    }
+
+    &.form-control-capitalize {
+        text-transform: capitalize;
+    }
+
+    &.form-control-uppercase {
+        text-transform: uppercase;
+    }
+
+    &.form-control-lowercase {
+        text-transform: lowercase;
+    }
+
+    &.form-control-variant {
+        font-variant: small-caps;
+    }
+
+    &.form-control-left {
+        text-align: left;
+    }
+
+    &.form-control-center {
+        text-align: center;
+    }
+
+    &.form-control-right {
+        text-align: right;
+    }
+
+    &.form-control-rtl {
+        direction: rtl;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
 }
+
 select.form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -342,4 +403,612 @@ textarea.form-control {
 }
 .note-editor.note-frame.card {
     @include box-shadow(none);
+}
+.input-group {
+    margin-bottom: 1.25em;
+}
+$form-border-state: primary, warning, default, danger, success, inverse, info;
+$form-border-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $form-border-state {
+    $i: index($form-border-state, $var);
+
+    .form-control-#{$var} {
+        border-color: nth($form-border-color, $i);
+        color: nth($form-border-color, $i);
+
+        &:focus {
+            border-color: nth($form-border-color, $i);
+        }
+    }
+
+    .input-group-#{$var} {
+        .input-group-append,
+        .input-group-prepend {
+            .input-group-text {
+                background-color: nth($form-border-color, $i);
+                border-color: nth($form-border-color, $i);
+                color: $white;
+            }
+        }
+
+        .form-control {
+            border-color: nth($form-border-color, $i);
+        }
+    }
+}
+$form-txt-state: primary, warning, default, danger, success, inverse, info;
+$form-txt-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $form-txt-state {
+    $i: index($form-txt-state, $var);
+
+    .form-txt-#{$var} {
+        color: nth($form-txt-color, $i);
+
+        &:focus {
+            color: nth($form-txt-color, $i);
+        }
+
+        &::-moz-placeholder {
+            color: nth($form-txt-color, $i);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: nth($form-txt-color, $i);
+        }
+
+        &::-webkit-input-placeholder {
+            color: nth($form-txt-color, $i);
+        }
+    }
+}
+$form-bg-state: primary, warning, default, danger, success, inverse, info;
+$form-bg-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $form-bg-state {
+    $i: index($form-bg-state, $var);
+
+    .form-bg-#{$var} {
+        background-color: nth($form-bg-color, $i);
+        border-color: nth($form-bg-color, $i);
+        color: #fff;
+
+        &:focus {
+            background-color: nth($form-bg-color, $i);
+            border-color: nth($form-bg-color, $i);
+            color: #fff;
+        }
+
+        &::-moz-placeholder {
+            color: #fff;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: #fff;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+    }
+}
+.form-radio {
+    position: relative;
+
+    .form-help {
+        position: absolute;
+        width: 100%;
+    }
+
+    label {
+        position: relative;
+        padding-left: 1.5rem;
+        text-align: left;
+        color: #333;
+        display: block;
+        line-height: 1.8;
+    }
+
+    input {
+        width: auto;
+        opacity: 0.00000001;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.radio {
+    .helper {
+        position: absolute;
+        top: -0.25rem;
+        left: -0.25rem;
+        cursor: pointer;
+        display: block;
+        font-size: 1rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #999;
+
+        &::after {
+            transform: scale(0);
+            background-color: $primary;
+            border-color: $primary;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            margin: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            -webkit-transition: -webkit-transform 0.28s ease;
+            transition: -webkit-transform 0.28s ease;
+            transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+            border-radius: 50%;
+            border: 0.125rem solid $primary;
+        }
+    }
+
+    label:hover .helper {
+        color: $primary;
+    }
+
+    input {
+        &:checked ~ .helper::after {
+            transform: scale(0.5);
+        }
+
+        &:checked ~ .helper::before {
+            color: $primary;
+            animation: ripple 0.3s linear forwards;
+        }
+    }
+
+    &.radiofill {
+        input:checked ~ .helper::after {
+            transform: scale(1);
+        }
+
+        .helper::after {
+            background-color: $primary;
+        }
+    }
+
+    &.radio-outline {
+        input:checked ~ .helper::after {
+            transform: scale(0.6);
+        }
+
+        .helper::after {
+            background-color: #fff;
+            border: 0.225rem solid $primary;
+        }
+    }
+
+    &.radio-matrial {
+        input ~ .helper::after {
+            background-color: #fff;
+        }
+
+        input:checked ~ .helper::after {
+            transform: scale(0.5);
+            box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.72);
+        }
+
+        input:checked ~ .helper::before {
+            background-color: $primary;
+        }
+    }
+
+    &.radio-disable {
+        label {
+            cursor: not-allowed;
+        }
+        opacity: 0.7;
+    }
+}
+
+.radio-inline {
+    display: inline-block;
+    margin-right: 20px;
+}
+$radio-bg-state: primary, warning, default, danger, success, inverse, info;
+$radio-bg-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $radio-bg-state {
+    $i: index($radio-bg-state, $var);
+
+    .radio {
+        &.radio-#{$var} {
+            .helper::after {
+                background-color: nth($radio-bg-color, $i);
+                border-color: nth($radio-bg-color, $i);
+            }
+
+            .helper::before {
+                border-color: nth($radio-bg-color, $i);
+            }
+        }
+
+        &.radio-outline {
+            &.radio-#{$var} {
+                .helper::after {
+                    background-color: #fff;
+                    border: 0.225rem solid nth($radio-bg-color, $i);
+                }
+
+                .helper::before {
+                    border-color: nth($radio-bg-color, $i);
+                }
+            }
+        }
+
+        &.radio-matrial {
+            &.radio-#{$var} {
+                input ~ .helper::after {
+                    background-color: #fff;
+                    border-color: #fff;
+                }
+
+                input ~ .helper::before {
+                    background-color: nth($radio-bg-color, $i);
+                    border-color: nth($radio-bg-color, $i);
+                }
+            }
+        }
+    }
+}
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+.border-checkbox-section {
+    .border-checkbox-group {
+        display: inline-block;
+
+        .border-checkbox:checked + .border-checkbox-label:before {
+            animation: ripple 0.3s linear forwards;
+        }
+
+        .border-checkbox:checked + .border-checkbox-label:after {
+            -webkit-animation: check linear 0.5s;
+            animation: check linear 0.5s;
+            opacity: 1;
+            border-color: $primary;
+
+            .border-checkbox-label {
+                &:before {
+                    border-color: #eee;
+                }
+            }
+        }
+
+        .border-checkbox-label {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            height: 20px;
+            line-height: 20px;
+            padding-left: 30px;
+            margin-right: 15px;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 12px;
+                opacity: 0.9;
+                border-right: 2px solid #eee;
+                border-top: 2px solid #eee;
+                position: absolute;
+                left: 4px;
+                top: 11px;
+                -webkit-transform: scaleX(-1) rotate(135deg);
+                transform: scaleX(-1) rotate(135deg);
+                -webkit-transform-origin: left top;
+                transform-origin: left top;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                border: 2px solid $primary;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    .border-checkbox {
+        display: none;
+
+        &:disabled {
+            ~ .border-checkbox-label {
+                cursor: no-drop;
+                color: #ccc;
+            }
+        }
+    }
+}
+@include theme-keyframes(check) {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    25% {
+        height: 0;
+        width: 6px;
+    }
+
+    50% {
+        height: 12px;
+        width: 6px;
+    }
+}
+$border-checkbox-bg-state: primary, warning, default, danger, success, inverse, info;
+$border-checkbox-bg-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $border-checkbox-bg-state {
+    $i: index($border-checkbox-bg-state, $var);
+
+    .border-checkbox-section .border-checkbox-group-#{$var} {
+        .border-checkbox-label:before {
+            border: 2px solid nth($border-checkbox-bg-color, $i);
+        }
+
+        .border-checkbox:checked + .border-checkbox-label:after {
+            border-color: nth($border-checkbox-bg-color, $i);
+        }
+    }
+}
+
+.checkbox-fade,
+.checkbox-zoom {
+    display: inline-block;
+    margin-right: 15px;
+
+    label {
+        line-height: 20px;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+
+            &:checked + .cr > .cr-icon {
+                transform: scale(1) rotateZ(0deg);
+                opacity: 1;
+            }
+
+            + .cr > .cr-icon {
+                transform: scale(3) rotateZ(-20deg);
+                opacity: 0;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    &.fade-in-disable {
+        .cr,
+        label {
+            color: #ccc;
+            cursor: no-drop;
+        }
+    }
+
+    .cr {
+        border-radius: 0;
+        border: 2px solid $primary;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        height: 20px;
+        margin-right: 1rem;
+        position: relative;
+        width: 20px;
+
+        .cr-icon {
+            color: $primary;
+            font-size: 1em;
+            left: 0;
+            line-height: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 50%;
+        }
+    }
+
+    input[type="checkbox"]:checked {
+        + .cr {
+            animation: ripple 0.3s linear forwards;
+        }
+    }
+}
+
+.checkbox-fade {
+    label {
+        line-height: 20px;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+
+            &:checked + .cr > .cr-icon {
+                transform: scale(1) rotateZ(0deg);
+                opacity: 1;
+            }
+
+            + .cr > .cr-icon {
+                transform: scale(3) rotateZ(-20deg);
+                opacity: 0;
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+}
+
+.checkbox-zoom {
+    label {
+        line-height: 20px;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+
+            &:checked + .cr > .cr-icon {
+                transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+                opacity: 1;
+            }
+
+            + .cr > .cr-icon {
+                transform: scale3d(0.2, 0.2, .1) translate3d(0, 0, 0);
+                opacity: 0;
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+}
+$fade-in-checkbox-bg-state: primary, warning, default, danger, success, inverse, info;
+$fade-in-checkbox-bg-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $fade-in-checkbox-bg-state {
+    $i: index($fade-in-checkbox-bg-state, $var);
+
+    .checkbox-fade,
+    .checkbox-zoom {
+        &.fade-in-#{$var},
+        &.zoom-#{$var} {
+            .cr {
+                border: 2px solid nth($fade-in-checkbox-bg-color, $i);
+
+                .cr-icon {
+                    color: nth($fade-in-checkbox-bg-color, $i);
+                }
+            }
+        }
+    }
+}
+
+.checkbox-color {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+
+    label {
+        display: inline-block;
+        position: relative;
+        padding-left: 10px;
+        line-height: 20px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin-left: -20px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            background-color: #fff;
+            transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        }
+
+        &::after {
+            display: inline-block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -1px;
+            top: 0;
+            margin-left: -17px;
+            padding-left: 3px;
+            padding-top: 1px;
+            font-size: 11px;
+            color: #fff;
+        }
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+
+        &:focus + label::before {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+        &:checked + label::after {
+            font-family: 'FontAwesome';
+            content: "\f00c";
+        }
+
+        &:checked + label::before {
+            animation: ripple 0.3s linear forwards;
+        }
+
+        &:disabled + label {
+            opacity: 0.65;
+
+            &::before {
+                background-color: #eee;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &.checkbox-circle label::before {
+        border-radius: 50%;
+    }
+
+    &.checkbox-inline {
+        margin-top: 0;
+    }
+}
+
+.checkbox-danger,
+.checkbox-info,
+.checkbox-primary,
+.checkbox-success,
+.checkbox-warning {
+    input[type="checkbox"]:checked + label::after {
+        color: #fff;
+    }
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+$background-checkbox-bg-state: primary, warning, default, danger, success, inverse, info;
+$background-checkbox-bg-color: $primary, $warning, $default, $danger, $success, $inverse, $info;
+@each $var in $background-checkbox-bg-state {
+    $i: index($background-checkbox-bg-state, $var);
+
+    .checkbox-#{$var} input[type="checkbox"]:checked + label::before {
+        background-color: nth($background-checkbox-bg-color, $i);
+    }
 }

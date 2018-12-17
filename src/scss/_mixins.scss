@@ -171,3 +171,11 @@ $breakpoints: ( "phone" : 400px, "phone-wide" : 480px, "phablet" : 560px, "table
         }
     }
 }
+@mixin theme-keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
