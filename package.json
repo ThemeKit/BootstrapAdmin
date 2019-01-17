@@ -23,7 +23,7 @@
     "@claviska/jquery-minicolors": "^2.3.2",
     "amcharts3": "^3.21.14",
     "ammap3": "^3.21.14",
-    "bootstrap": "^4.1.3",
+    "bootstrap": "^4.2.1",
     "bootstrap-slider": "^10.3.2",
     "bootstrap-tagsinput": "^0.7.1",
     "c3": "^0.6.8",
