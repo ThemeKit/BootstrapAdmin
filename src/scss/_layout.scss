@@ -1,0 +1,200 @@
+.layout-wrap {
+	.list-item {
+		.card-img {
+			display: none !important;
+			.badge {
+				display: none;
+			}
+		}
+		.list-actions {
+			align-self: center;
+			@include flexbox();
+			margin-right: 30px;
+			opacity: 0;
+			visibility: hidden;
+			a {
+			    width: 30px;
+			    height: 30px;
+			    padding: 0;
+			    border-radius: 50%;
+			    text-align: center;
+			    line-height: 32px;
+			    color: #999;
+			    display: inline-block;
+			    font-size: 16px;
+			    &:hover, &:focus {
+				    background-color: #dee2e6;
+				    color: #333;
+				}
+			}
+		}
+		&.list-item-thumb {
+			.card-img {
+				display: flex !important;
+			}
+		}
+		&.list-item-grid {
+			.card {
+				display: block !important;
+				.card-img {
+					display: block !important;
+					position: relative;
+					max-height: 100%;
+					border-top-left-radius: calc(.25rem - 1px);
+    				border-top-right-radius: calc(.25rem - 1px);
+    				img {
+    					height: auto;
+    					width: 100% !important;
+    				}
+					.badge {
+						display: inline-block;
+					}
+				}
+				.card-content {
+					display: block !important;
+					position: relative;
+					.card-body {
+						display: block !important;
+						.list-item-heading {
+							width: 100% !important;
+							text-overflow: inherit !important;
+							white-space: inherit !important;
+							display: block;
+							margin-bottom: 20px !important;
+						}
+						p {
+							width: 100% !important;
+							&.category {
+								display: none;
+							}
+						}
+						.badge {
+							display: none !important;
+						}
+					}
+					.custom-checkbox {
+						display: none;
+					}
+					.list-actions {
+						display: block;
+						opacity: 1;
+						margin: 0;
+						position: absolute;
+						right: 20px;
+						bottom: 20px;
+					}
+				}
+			}
+		}
+		&:hover {
+			.list-actions {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+.display-options {
+	.dispaly-option-buttons {
+		a {
+			display: inline-block;
+			background-color: #fff;
+			padding: 4px 8px;
+			border: 1px solid #eaeaea;
+			border-radius: 6px;
+			font-size: 14px;
+			&:focus, &.active {
+				background-color: #343a40;
+				color: #fff;
+			}
+		}
+	}
+	.search-sm {
+		position: relative;
+		.form-control {
+			min-height: 32px;
+			padding-right: 60px;
+			& ~ .btn {
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    padding: 0;
+			    width: 30px;
+			    height: 32px;
+			    line-height: 30px;
+			    border-radius: 4px;
+			    background-color: #eceff1;
+			    border: none;
+			    -webkit-box-shadow: none;
+			    -moz-box-shadow: none;
+			    box-shadow: none;
+			}
+		}
+		.adv-btn {
+		    background-color: transparent;
+		    border: 0;
+		    position: absolute;
+		    right: 30px;
+		    top: 0;
+		    width: 30px;
+		    height: 30px;
+		    line-height: 30px;
+		    padding: 0;
+		    -webkit-box-shadow: none;
+		    -moz-box-shadow: none;
+		    box-shadow: none;
+		}
+		.adv-search-wrap {
+		    padding: 20px;
+		    display: none;
+		    position: absolute;
+		    left: 30px !important;
+		    width: 100%;
+		    top: 30px;
+		    background-color: #fff;
+		    z-index: 4;
+		    -webkit-box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+		    -moz-box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+		    box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+		    border-radius: 6px;
+		    -webkit-border-radius: 6px;
+		    -moz-border-radius: 6px;
+		    &.show {
+			    display: block;
+			}
+		}
+	}
+}
+.edit-layout-modal {
+	.modal-dialog {
+		margin: 0;
+		margin-left: auto;
+    	margin-right: 0;
+		.modal-content {
+			border-radius: 0;
+			border: none;
+			min-height: 100vh;
+			.modal-header, .modal-footer {
+				padding: 15px 30px;
+			}
+			.modal-body {
+				padding: 30px;
+			}
+		}
+		@include mq('phablet') {
+			max-width: 50%;
+		}
+	}
+	&.fade {
+		.modal-dialog {
+			-webkit-transform: translate(25%,0);
+    		transform: translate(25%,0);
+		}
+	}
+	&.show {
+		.modal-dialog {
+		    -webkit-transform: translate(0,0);
+		    transform: translate(0,0);
+		}
+	}
+}

@@ -198,5 +198,26 @@
             else
             $(this).find('.material-icons').html('expand_more');
         });
+
+        var gridButton = $('a.view-grid'),
+            thumbButton = $('a.view-thumb'),
+            listButton = $('a.view-list'),
+            items = $('ul.view-as'),
+            displayButtons = $('.dispaly-option-buttons a');
+
+        gridButton.click(function() {
+            $('#layout-wrap .list-item').attr('class', 'col-xl-3 col-lg-4 col-12 col-sm-6 mb-4 list-item list-item-grid');
+        });
+        listButton.click(function() {
+            $('#layout-wrap .list-item').attr('class', 'col-12 list-item');
+        });
+        thumbButton.click(function() {
+            $('#layout-wrap .list-item').attr('class', 'col-12 list-item list-item-thumb');
+        });
+
+        $(displayButtons).on('click', function(){
+            $(displayButtons).removeClass('active');
+            $(this).addClass('active');
+        });
     })
 }(window, document, jQuery);

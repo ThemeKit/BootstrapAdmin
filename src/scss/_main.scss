@@ -6,6 +6,9 @@ body {
     font-weight: 400;
     font-family: $ff;
 }
+p {
+	font-size: 14px;
+}
 .dropdown-toggle {
     @include pseudo-element('after') {
 		display: none;
@@ -734,6 +737,7 @@ body {
 									    line-height: 32px;
 									    color: #999;
 									    display: inline-block;
+									    font-size: 16px;
 									    &:hover, &:focus {
 									    	background-color: #dee2e6;
     										color: #333;
@@ -1252,4 +1256,10 @@ hr {
 }
 .user--offline:after {
     background: #bbb;
+}
+.swal-modal {
+	padding: 20px;
+	.swal-footer {
+		text-align: center;
+	}
 }

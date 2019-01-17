@@ -118,6 +118,11 @@
 	    flex: 1 1 auto;
 	    position: relative;
 	}
+	.card-footer {
+		background-color: transparent;
+		padding: 20px 20px;
+		border-top: 1px solid #f1f1f1;
+	}
 	.card-img {
 	    height: 100%;
 	    object-fit: cover;
