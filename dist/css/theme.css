@@ -1393,7 +1393,7 @@ a:hover, a:focus, a:active { outline: 0; text-decoration: none; color: #212121; 
 .pagination .page-item .page-link.first, .pagination .page-item .page-link.last { color: #ffffff; background-color: #3e5569; }
 .pagination .page-item.active .page-link { background-color: #007bff; color: #ffffff; }
 
-.btn { padding: 6px 14px; height: 30px; font-size: 13px; font-weight: 600; -moz-transition: 0.3s ease-in-out; -o-transition: 0.3s ease-in-out; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; }
+.btn { font-weight: 600; -moz-transition: 0.3s ease-in-out; -o-transition: 0.3s ease-in-out; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; }
 .btn i { margin-right: 5px; }
 
 .btn-icon { width: 30px; height: 30px; padding: 0; text-align: center; line-height: 32px; font-size: 14px; display: inline-block; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
